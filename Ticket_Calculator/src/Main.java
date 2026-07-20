@@ -1,5 +1,3 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         System.out.println("System of counting the cost of movie tickets");
@@ -30,6 +28,8 @@ public class Main {
             hasDiscount = true;
         }
         System.out.println("The price of chosen ticket is " + ticketPrice);
+        System.out.println("test");
+
         double totalPrice = 0;
         if (!hasDiscount) {
             totalPrice = ticketPrice * amount;
