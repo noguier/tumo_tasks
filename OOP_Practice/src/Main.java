@@ -16,5 +16,19 @@ public class Main {
         // Uses the constructor with two parameters (pre-filled basket)
         Basket mashaBasket = new Basket("Table", 5000);
         mashaBasket.print("Masha's basket:");
+
+        EncapsulatedBasket basket = new EncapsulatedBasket(100);
+
+        basket.add("Bread", 5);        // true
+        basket.add("Cheese", 40);      // true
+        boolean added = basket.add("Steak", 80);   // false — 45 + 80 > 100
+
+        if (!added) {
+            System.out.println("Steak doesn't fit in your budget.");   // the CALLER prints
+        }
+
+        System.out.println(basket);
+        System.out.println(basket.getItemCount());    // 2
+        System.out.println(basket.getTotalPrice());   // 45
     }
 }
